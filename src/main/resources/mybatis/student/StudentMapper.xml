@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sharp.student.dao.StudentDao">
+
+	<select id="get" resultType="com.sharp.student.domain.StudentDO">
+		select `id`,`user_id`,`dept_id`,`credit`,`name`,`identity_card`,`sex`,`create_date`,`update_date`,`star_level` from student where id = #{value}
+	</select>
+
+	<select id="getByUserId" resultType="com.sharp.student.domain.StudentDO">
+		select `id`,`user_id`,`dept_id`,`credit`,`name`,`identity_card`,`sex`,`create_date`,`update_date`,`star_level` from student where user_id = #{value}
+	</select>
+
+	<select id="list" resultType="com.sharp.student.domain.StudentDO">
+		select `id`,`user_id`,`dept_id`,`credit`,`name`,`identity_card`,`sex`,`create_date`,`update_date`,`star_level`  from student
+        <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="deptId != null and deptId != ''"> and dept_id = #{deptId} </if>
+		  		  <if test="credit != null and credit != ''"> and credit = #{credit} </if>
+		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="identityCard != null and identityCard != ''"> and identity_card = #{identityCard} </if>
+		  		  <if test="sex != null and sex != ''"> and sex = #{sex} </if>
+		  		  <if test="createDate != null and createDate != ''"> and create_date = #{createDate} </if>
+		  		  <if test="updateDate != null and updateDate != ''"> and update_date = #{updateDate} </if>
+
+			     <if test="depts != null"> and dept_id in
+					 <foreach item="item" index="index" collection="depts" open="("
+							  separator="," close=")">
+						 #{item}
+					 </foreach>
+				 </if>
+		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by credit desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from student
+		 <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="deptId != null and deptId != ''"> and dept_id = #{deptId} </if>
+		  		  <if test="credit != null and credit != ''"> and credit = #{credit} </if>
+		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="identityCard != null and identityCard != ''"> and identity_card = #{identityCard} </if>
+		  		  <if test="sex != null and sex != ''"> and sex = #{sex} </if>
+		  		  <if test="createDate != null and createDate != ''"> and create_date = #{createDate} </if>
+		  		  <if test="updateDate != null and updateDate != ''"> and update_date = #{updateDate} </if>
+				 <if test="depts != null"> and dept_id in
+					 <foreach item="item" index="index" collection="depts" open="("
+							  separator="," close=")">
+						 #{item}
+					 </foreach>
+				 </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.sharp.student.domain.StudentDO">
+		insert into student
+		(
+			`id`, 
+			`user_id`, 
+			`dept_id`, 
+			`credit`, 
+			`name`, 
+			`identity_card`, 
+			`sex`, 
+			`create_date`, 
+			`update_date`,
+			`star_level`
+		)
+		values
+		(
+			#{id}, 
+			#{userId}, 
+			#{deptId}, 
+			#{credit}, 
+			#{name}, 
+			#{identityCard}, 
+			#{sex}, 
+			#{createDate}, 
+			#{updateDate},
+			#{starLevel}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.sharp.student.domain.StudentDO">
+		update student 
+		<set>
+			<if test="userId != null">`user_id` = #{userId}, </if>
+			<if test="deptId != null">`dept_id` = #{deptId}, </if>
+			<if test="credit != null">`credit` = #{credit}, </if>
+			<if test="name != null">`name` = #{name}, </if>
+			<if test="identityCard != null">`identity_card` = #{identityCard}, </if>
+			<if test="sex != null">`sex` = #{sex}, </if>
+			<if test="createDate != null">`create_date` = #{createDate}, </if>
+			<if test="updateDate != null">`update_date` = #{updateDate},</if>
+			<if test="starLevel != null">`star_level` = #{starLevel}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from student where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from student where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

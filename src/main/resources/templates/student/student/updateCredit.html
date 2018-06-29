@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm2">
+							<div class="form-group">
+								<label class="col-sm-3 control-label">姓名：</label>
+								<div class="col-sm-8">
+									<input disabled="disabled"  th:value="${student.name}" class="form-control" type="text">
+									<input name="studentId"  th:value="${student.id}" type="hidden">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">变动类型：</label>
+								<div class="col-sm-8">
+									<select class="form-control" name="creditRuleId">
+										<option th:each="credit:${creditList}" th:value="${credit.id}" th:text="${credit.name}" ></option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="button" id="credit_save" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/student/student/updateCredit.js">
+	</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sharp.student.dao.AwardDao">
+
+	<select id="get" resultType="com.sharp.student.domain.AwardDO">
+		select `id`,`info`,`student_id`,`status`,`create_date` from award where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.sharp.student.domain.AwardDO">
+		select `id`,`info`,`student_id`,`status`,`create_date` from award
+        <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="info != null and info != ''"> and info = #{info} </if>
+		  		  <if test="studentId != null and studentId != ''"> and student_id = #{studentId} </if>
+		  		  <if test="status != null and status != ''"> and status = #{status} </if>
+		  		  <if test="createDate != null and createDate != ''"> and create_date = #{createDate} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from award
+		 <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="info != null and info != ''"> and info = #{info} </if>
+		  		  <if test="studentId != null and studentId != ''"> and student_id = #{studentId} </if>
+		  		  <if test="status != null and status != ''"> and status = #{status} </if>
+		  		  <if test="createDate != null and createDate != ''"> and create_date = #{createDate} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.sharp.student.domain.AwardDO">
+		insert into award
+		(
+			`id`, 
+			`info`, 
+			`student_id`, 
+			`status`, 
+			`create_date`
+		)
+		values
+		(
+			#{id}, 
+			#{info}, 
+			#{studentId}, 
+			#{status}, 
+			#{createDate}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.sharp.student.domain.AwardDO">
+		update award 
+		<set>
+			<if test="info != null">`info` = #{info}, </if>
+			<if test="studentId != null">`student_id` = #{studentId}, </if>
+			<if test="status != null">`status` = #{status}, </if>
+			<if test="createDate != null">`create_date` = #{createDate}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from award where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from award where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sharp.student.dao.CreditDao">
+
+	<select id="get" resultType="com.sharp.student.domain.CreditDO">
+		select `id`,`credit_rule_id`,`student_id`,`create_date`,`create_by`,`credit` from credit where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.sharp.student.domain.CreditDO">
+		select c.`id`,c.`credit_rule_id`,c.`student_id`,c.`create_date`,c.`create_by`,c.`credit`, d.`name` as credit_name from credit c, sys_dict d
+        <where>
+				  and c.credit_rule_id = d.id
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="creditRuleId != null and creditRuleId != ''"> and c.credit_rule_id = #{creditRuleId} </if>
+		  		  <if test="studentId != null and studentId != ''"> and c.student_id = #{studentId} </if>
+		  		  <if test="createDate != null and createDate != ''"> and c.create_date = #{createDate} </if>
+		  		  <if test="createBy != null and createBy != ''"> and c.create_by = #{createBy} </if>
+		  		  <if test="credit != null and credit != ''"> and c.credit = #{credit} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by c.id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from credit c, sys_dict d
+		 <where>
+			 and c.credit_rule_id = d.id
+			 <if test="id != null and id != ''"> and id = #{id} </if>
+			 <if test="creditRuleId != null and creditRuleId != ''"> and c.credit_rule_id = #{creditRuleId} </if>
+			 <if test="studentId != null and studentId != ''"> and c.student_id = #{studentId} </if>
+			 <if test="createDate != null and createDate != ''"> and c.create_date = #{createDate} </if>
+			 <if test="createBy != null and createBy != ''"> and c.create_by = #{createBy} </if>
+			 <if test="credit != null and credit != ''"> and c.credit = #{credit} </if>
+		 </where>
+	</select>
+	 
+	<insert id="save" parameterType="com.sharp.student.domain.CreditDO">
+		insert into credit
+		(
+			`id`, 
+			`credit_rule_id`, 
+			`student_id`,
+			`create_date`, 
+			`create_by`, 
+			`credit`
+		)
+		values
+		(
+			#{id}, 
+			#{creditRuleId}, 
+			#{studentId},
+			#{createDate}, 
+			#{createBy}, 
+			#{credit}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.sharp.student.domain.CreditDO">
+		update credit 
+		<set>
+			<if test="creditRuleId != null">`credit_rule_id` = #{creditRuleId}, </if>
+			<if test="studentId != null">`student_id` = #{studentId}, </if>
+			<if test="createDate != null">`create_date` = #{createDate}, </if>
+			<if test="createBy != null">`create_by` = #{createBy}, </if>
+			<if test="credit != null">`credit` = #{credit}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from credit where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from credit where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>
