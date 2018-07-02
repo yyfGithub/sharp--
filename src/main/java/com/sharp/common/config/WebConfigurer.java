@@ -11,7 +11,7 @@ class WebConfigurer extends WebMvcConfigurerAdapter {
 	BootdoConfig bootdoConfig;
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/files/**").addResourceLocations("file:///"+bootdoConfig.getUploadPath());
+		registry.addResourceHandler("/files/**").addResourceLocations("file:/login");
 	}
 
 }
