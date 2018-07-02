@@ -4426,3 +4426,23 @@ HTTP METHOD : GET
 CLASS_METHOD : com.sharp.system.controller.LoginController.main
 参数 : []
 耗时 : 44
+请求地址 : http://127.0.0.1:8080/index
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.index
+参数 : [{}]
+耗时 : 10
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 0
+请求地址 : http://127.0.0.1:8080/oa/notify/message
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.oa.controller.NotifyController.message
+参数 : []
+耗时 : 7
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 0

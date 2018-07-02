@@ -83,8 +83,8 @@
       <file leaf-file-name="index_v1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index_v1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="170" column="36" selection-start-line="170" selection-start-column="36" selection-end-line="170" selection-end-column="36" />
+            <state relative-caret-position="495">
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -633,12 +633,12 @@
       <workItem from="1530071358789" duration="49894000" />
       <workItem from="1530239149853" duration="11401000" />
       <workItem from="1530255989630" duration="102000" />
-      <workItem from="1530256128521" duration="12175000" />
+      <workItem from="1530256128521" duration="12214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76753000" />
+    <option name="totallyTimeSpent" value="76792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-350" width="2560" height="1440" extended-state="0" />
@@ -664,8 +664,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.499502" weight="0.32922202" />
       <window_info anchor="bottom" id="Spring" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49722" visible="true" weight="0.32893774" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20373312" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49722" visible="true" weight="0.32893774" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20373312" />
       <window_info anchor="bottom" id="Problems" order="13" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
@@ -1057,8 +1057,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index_v1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="170" column="36" selection-start-line="170" selection-start-column="36" selection-end-line="170" selection-end-column="36" />
+        <state relative-caret-position="495">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
         </state>
       </provider>
     </entry>
