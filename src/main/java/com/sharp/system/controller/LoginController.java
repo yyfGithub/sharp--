@@ -32,6 +32,16 @@ import java.util.List;
 
 @Controller
 public class LoginController extends BaseController {
+	@Override
+	public Long getUserId() {
+		return super.getUserId();
+	}
+
+	@Override
+	public UserDO getUser() {
+		return super.getUser();
+	}
+
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
