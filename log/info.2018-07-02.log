@@ -4213,3 +4213,216 @@ HTTP METHOD : GET
 CLASS_METHOD : com.sharp.system.controller.LoginController.login
 参数 : []
 耗时 : 0
+请求地址 : http://127.0.0.1:8080/login
+HTTP METHOD : POST
+CLASS_METHOD : com.sharp.system.controller.LoginController.ajaxLogin
+参数 : [bzr001, 111111]
+耗时 : 81
+More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [clientInboundChannelExecutor, clientOutboundChannelExecutor, brokerChannelExecutor, messageBrokerTaskScheduler]
+请求地址 : http://127.0.0.1:8080/index
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.index
+参数 : [{}]
+耗时 : 41
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 0
+请求地址 : http://127.0.0.1:8080/oa/notify/message
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.oa.controller.NotifyController.message
+参数 : []
+耗时 : 15
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 1
+请求地址 : http://127.0.0.1:8080/student/student
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.student.controller.StudentController.Student
+参数 : [{}]
+耗时 : 28
+请求地址 : http://127.0.0.1:8080/student/student/list
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.student.controller.StudentController.list
+参数 : [{limit=10, offset=0}]
+==>  Preparing: select `id`,`user_id`,`dept_id`,`credit`,`name`,`identity_card`,`sex`,`create_date`,`update_date`,`star_level` from student WHERE dept_id in ( ? , ? ) order by credit desc limit ?, ? 
+==> Parameters: 45(Long), 48(Long), 0(Integer), 10(Integer)
+<==      Total: 10
+==>  Preparing: select count(*) from student WHERE dept_id in ( ? , ? ) 
+==> Parameters: 45(Long), 48(Long)
+<==      Total: 1
+耗时 : 202
+请求地址 : http://127.0.0.1:8080/student/student/credit
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.student.controller.StudentController.crdeit
+参数 : [{}]
+耗时 : 0
+请求地址 : http://127.0.0.1:8080/student/student/creditList
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.student.controller.StudentController.creditList
+参数 : [{limit=10, offset=0}]
+==>  Preparing: select c.`id`,c.`credit_rule_id`,c.`student_id`,c.`create_date`,c.`create_by`,c.`credit`, d.`name` as credit_name from credit c, sys_dict d WHERE c.credit_rule_id = d.id order by c.id desc limit ?, ? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 10
+==>  Preparing: select count(*) from credit c, sys_dict d WHERE c.credit_rule_id = d.id 
+==> Parameters: 
+<==      Total: 1
+耗时 : 240
+请求地址 : http://127.0.0.1:8080/student/student/creditList
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.student.controller.StudentController.creditList
+参数 : [{limit=10, offset=10}]
+==>  Preparing: select c.`id`,c.`credit_rule_id`,c.`student_id`,c.`create_date`,c.`create_by`,c.`credit`, d.`name` as credit_name from credit c, sys_dict d WHERE c.credit_rule_id = d.id order by c.id desc limit ?, ? 
+==> Parameters: 10(Integer), 10(Integer)
+<==      Total: 10
+==>  Preparing: select count(*) from credit c, sys_dict d WHERE c.credit_rule_id = d.id 
+==> Parameters: 
+<==      Total: 1
+耗时 : 83
+请求地址 : http://127.0.0.1:8080/student/student/creditList
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.student.controller.StudentController.creditList
+参数 : [{limit=10, offset=20}]
+==>  Preparing: select c.`id`,c.`credit_rule_id`,c.`student_id`,c.`create_date`,c.`create_by`,c.`credit`, d.`name` as credit_name from credit c, sys_dict d WHERE c.credit_rule_id = d.id order by c.id desc limit ?, ? 
+==> Parameters: 20(Integer), 10(Integer)
+<==      Total: 10
+==>  Preparing: select count(*) from credit c, sys_dict d WHERE c.credit_rule_id = d.id 
+==> Parameters: 
+<==      Total: 1
+耗时 : 7
+请求地址 : http://127.0.0.1:8080/student/student/creditList
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.student.controller.StudentController.creditList
+参数 : [{limit=10, offset=30}]
+==>  Preparing: select c.`id`,c.`credit_rule_id`,c.`student_id`,c.`create_date`,c.`create_by`,c.`credit`, d.`name` as credit_name from credit c, sys_dict d WHERE c.credit_rule_id = d.id order by c.id desc limit ?, ? 
+==> Parameters: 30(Integer), 10(Integer)
+<==      Total: 6
+==>  Preparing: select count(*) from credit c, sys_dict d WHERE c.credit_rule_id = d.id 
+==> Parameters: 
+<==      Total: 1
+耗时 : 7
+请求地址 : http://127.0.0.1:8080/student/student/creditList
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.student.controller.StudentController.creditList
+参数 : [{limit=50, offset=0}]
+==>  Preparing: select c.`id`,c.`credit_rule_id`,c.`student_id`,c.`create_date`,c.`create_by`,c.`credit`, d.`name` as credit_name from credit c, sys_dict d WHERE c.credit_rule_id = d.id order by c.id desc limit ?, ? 
+==> Parameters: 0(Integer), 50(Integer)
+<==      Total: 36
+==>  Preparing: select count(*) from credit c, sys_dict d WHERE c.credit_rule_id = d.id 
+==> Parameters: 
+<==      Total: 1
+耗时 : 8
+请求地址 : http://127.0.0.1:8080/student/student/creditList
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.student.controller.StudentController.creditList
+参数 : [{limit=10, offset=0}]
+==>  Preparing: select c.`id`,c.`credit_rule_id`,c.`student_id`,c.`create_date`,c.`create_by`,c.`credit`, d.`name` as credit_name from credit c, sys_dict d WHERE c.credit_rule_id = d.id order by c.id desc limit ?, ? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 10
+==>  Preparing: select count(*) from credit c, sys_dict d WHERE c.credit_rule_id = d.id 
+==> Parameters: 
+<==      Total: 1
+耗时 : 86
+请求地址 : http://127.0.0.1:8080/sys/user/
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.UserController.user
+参数 : [{}]
+耗时 : 2
+请求地址 : http://127.0.0.1:8080/system/sysDept/tree
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.DeptController.tree
+参数 : []
+请求地址 : http://127.0.0.1:8080/sys/user/list
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.UserController.list
+参数 : [{limit=10, offset=0, name=, deptId=}]
+耗时 : 14
+耗时 : 70
+请求地址 : http://127.0.0.1:8080/sys/user/list
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.UserController.list
+参数 : [{limit=10, offset=0, name=, deptId=48}]
+耗时 : 13
+请求地址 : http://127.0.0.1:8080/sys/user/list
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.UserController.list
+参数 : [{limit=10, offset=0, name=, deptId=45}]
+耗时 : 11
+请求地址 : http://127.0.0.1:8080/sys/user/personal
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.UserController.personal
+参数 : [{}]
+耗时 : 49
+请求地址 : http://127.0.0.1:8080/blog
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.blog.controller.BlogController.blog
+参数 : []
+耗时 : 0
+请求地址 : http://127.0.0.1:8080/blog/open/list
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.blog.controller.BlogController.opentList
+参数 : [{type=article, limit=10, offset=0}]
+耗时 : 113
+请求地址 : http://127.0.0.1:8080/index
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.index
+参数 : [{}]
+耗时 : 12
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 2
+请求地址 : http://127.0.0.1:8080/oa/notify/message
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.oa.controller.NotifyController.message
+参数 : []
+耗时 : 5
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 0
+请求地址 : http://127.0.0.1:8080/index
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.index
+参数 : [{}]
+耗时 : 9
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 0
+请求地址 : http://127.0.0.1:8080/oa/notify/message
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.oa.controller.NotifyController.message
+参数 : []
+耗时 : 5
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 0
+请求地址 : http://127.0.0.1:8080/index
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.index
+参数 : [{}]
+耗时 : 35
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 0
+请求地址 : http://127.0.0.1:8080/oa/notify/message
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.oa.controller.NotifyController.message
+参数 : []
+耗时 : 9
+请求地址 : http://127.0.0.1:8080/main
+HTTP METHOD : GET
+CLASS_METHOD : com.sharp.system.controller.LoginController.main
+参数 : []
+耗时 : 44

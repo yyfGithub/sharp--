@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7db8c71d-9ea8-4533-a11b-ceadb4588517" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.2018-07-02.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.2018-07-02.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/info.2018-07-02.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/info.2018-07-02.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sharp/common/task/WelcomeJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sharp/common/task/WelcomeJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sharp/system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sharp/system/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sharp/system/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sharp/system/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_v1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_v1.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,33 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WelcomeJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sharp/common/task/WelcomeJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSocketConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sharp/oa/config/WebSocketConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotifyController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sharp/oa/controller/NotifyController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WebSocketController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sharp/oa/controller/WebSocketController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -104,13 +71,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_v1.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index_v1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="170" column="36" selection-start-line="170" selection-start-column="36" selection-end-line="170" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/menu/menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-16" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="include.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/include.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -147,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/sharp/common/utils/BuildList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sharp/system/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/system/user/add.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/sys/menu/add.js" />
@@ -198,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sharp/common/aspect/WebLogAspect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sharp/common/task/WelcomeJob.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index_v1.html" />
       </list>
     </option>
   </component>
@@ -502,6 +490,34 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="sharp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -617,19 +633,19 @@
       <workItem from="1530071358789" duration="49894000" />
       <workItem from="1530239149853" duration="11401000" />
       <workItem from="1530255989630" duration="102000" />
-      <workItem from="1530256128521" duration="11768000" />
+      <workItem from="1530256128521" duration="12175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76346000" />
+    <option name="totallyTimeSpent" value="76753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-350" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50556" side_tool="true" visible="true" weight="0.23150183" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50277996" side_tool="true" visible="true" weight="0.32893774" />
       <window_info anchor="right" id="Maven Projects" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
@@ -638,7 +654,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49444002" visible="true" weight="0.23150183" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49444002" weight="0.23150183" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49800798" weight="0.4259962" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -648,7 +664,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.499502" weight="0.32922202" />
       <window_info anchor="bottom" id="Spring" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49761716" weight="0.32893774" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49722" visible="true" weight="0.32893774" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20373312" />
       <window_info anchor="bottom" id="Problems" order="13" />
       <window_info anchor="right" id="Bean Validation" order="8" />
@@ -678,17 +694,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.6/commons-lang3-3.6.jar!/org/apache/commons/lang3/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
-          <folding>
-            <element signature="e#2463#2464#0" expanded="true" />
-            <element signature="e#2498#2499#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sharp/student/config/GradeConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -752,16 +757,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/include.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index_v1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3933">
-          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/generator.properties">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1045,10 +1040,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/include.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/menu/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index_v1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="170" column="36" selection-start-line="170" selection-start-column="36" selection-end-line="170" selection-end-column="36" />
         </state>
       </provider>
     </entry>
